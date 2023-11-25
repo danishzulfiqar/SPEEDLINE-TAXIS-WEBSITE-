@@ -44,6 +44,11 @@
                 <input type="text" class="form-control" id="dropoff" placeholder="Enter Drop-off Location" required>
               </div>
               <div class="form-group">
+                <label for="phone"><b>Phone Number</b></label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" pattern="[0-9]{10}" required>
+                <small>Enter a 10-digit phone number</small>
+            </div>
+              <div class="form-group">
                 <label for="fleetOptions"><b>Choose Fleet</b></label>
                 <select class="form-control" id="fleetOptions" required>
                   <option value="" disabled selected>Select Fleet</option>
@@ -82,6 +87,7 @@
             <p class="confirm-p"><b>Pickup Location:</b> <span id="confirmed-pickup"></span></p>
             <p class="confirm-p"><b>Drop-off Location:</b> <span id="confirmed-dropoff"></span></p>
             <p class="confirm-p"><b>Selected Fleet:</b> <span id="confirmed-fleet"></span></p>
+            <p class="confirm-p"><b>Phone no:</b> <span id="confirmed-phone"></span></p>
             <p class="confirm-p"><b>Date:</b> <span id="confirmed-date"></span></p>
             <p class="confirm-p"><b>Time:</b> <span id="confirmed-time"></span></p>
             <p class="confirm-p"><b>payment Method:</b> <span id="confirmed-Payment-Methode"></span></p>

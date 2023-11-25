@@ -124,6 +124,7 @@ function submit_click() {
   const pickup = document.getElementById('pickup').value;
   const dropoff = document.getElementById('dropoff').value;
   const fleet = document.getElementById('fleetOptions').value;
+  const phone = document.getElementById('phone').value;
   const date = document.getElementById('date').value;
   const time = document.getElementById('time').value;
   const payment = document.getElementById('paymentmethode').value;
@@ -133,11 +134,12 @@ function submit_click() {
   document.getElementById('confirmed-pickup').textContent = pickup;
   document.getElementById('confirmed-dropoff').textContent = dropoff;
   document.getElementById('confirmed-fleet').textContent = fleet;
+  document.getElementById('confirmed-phone').textContent = phone;
   document.getElementById('confirmed-date').textContent = date;
   document.getElementById('confirmed-time').textContent = time;
   document.getElementById('confirmed-Payment-Methode').textContent = payment;
 
-  if (name === '' || pickup === '' || dropoff === '' || fleet === '' || date === '' || time === '' || payment === '') {
+  if (name === '' || pickup === '' || dropoff === '' || fleet === '' || phone === '' || date === '' || time === '' || payment === '') {
     alert('Please fill in all the required fields.'); 
     return; 
   }
