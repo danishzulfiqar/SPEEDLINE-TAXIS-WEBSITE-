@@ -169,10 +169,10 @@ function initMap() {
 
 /////////////////////////////////////////////////////////////////////////////
 
-function submit_click() {
+function confirm_form() {
 
   ////// enter your mail
-  const recepient = "devhamrahi@gmail.com"
+  const recepient = "enquiries@speedlinetaxis.org.uk"
 
   const name = document.getElementById('name').value;
   const pickup = document.getElementById('pickup').value;
@@ -198,6 +198,7 @@ function submit_click() {
   axios.post('https://nodemailerapp.vercel.app/sendemail', formData)
       .then(response => {
           console.log('Server response:', response.data);
+          alert('Your Request has been Submitted')
           window.location.href = "index.html";
       })
       .catch(error => {

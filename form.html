@@ -50,10 +50,9 @@
         </div>
         <div class="form-group">
           <label for="phone"><b>Phone Number</b></label>
-          <input type="tel" class="form-control" id="phone" placeholder="Enter Phone Number" pattern="[0-9]{10}"
-            required>
-          <small>Enter a 10-digit phone number</small>
-        </div>
+          <input type="tel" class="form-control" id="phone" placeholder="+44 1234 567890" pattern="[+]{1}[0-9]{2} [0-9]{4} [0-9]{6}" required>
+          <small>Enter a phone number starting with country code</small>
+      </div>
         <div class="form-group">
           <label for="fleetOptions"><b>Choose Fleet</b></label>
           <select class="form-control" id="fleetOptions" required>
@@ -98,7 +97,7 @@
       <p class="confirm-p"><b>Time:</b> <span id="confirmed-time"></span></p>
       <p class="confirm-p"><b>payment Method:</b> <span id="confirmed-Payment-Methode"></span></p>
       <button type="button" class="btn btn-success" onclick="confirmBooking()">Back</button>
-      <button type="button" class="btn btn-success">Confirm</button>
+      <button type="button" class="btn btn-success" onclick="confirm_form()">Confirm</button>
     </div>
 
   </section>
@@ -118,9 +117,8 @@
   </section>
 
   <script src="JS/index.js"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=API_Key&libraries=places&callback=initMap"
-    async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwncpgAXf6k-Ko0xI-oR7CeHMO0hrpUW8&libraries=geometry,places&callback=initMap"
+  async defer></script>
 </body>
 
 </html>
