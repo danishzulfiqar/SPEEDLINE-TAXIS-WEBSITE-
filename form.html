@@ -43,7 +43,28 @@
         <div class="form-group">
           <label for="pickup"><b>Pickup Location</b></label>
           <input type="text" class="form-control" id="pickup" placeholder="Enter Pickup Location" required>
-        </div>
+        </div>  
+
+
+        <div class="form-group">
+          <label for="fleetOptions"><b>Select no of stops in between journey</b></label>
+          <select class="form-control" id="via-number" onchange="addVia()" required>
+            <option value="" disabled selected>#</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+          </select>
+        </div> 
+
+        <div id="via-input" style="gap: 20px;"></div>
+
+
         <div class="form-group">
           <label for="dropoff"><b>Drop-off Location</b></label>
           <input type="text" class="form-control" id="dropoff" placeholder="Enter Drop-off Location" required>
@@ -57,9 +78,9 @@
           <label for="fleetOptions"><b>Choose Fleet</b></label>
           <select class="form-control" id="fleetOptions" required>
             <option value="" disabled selected>Select Fleet</option>
-            <option value="Prius">Prius</option>
-            <option value="Mercedes E-Class">Mercedes E-Class</option>
-            <option value="Mercedes V-Class">Mercedes V-Class</option>
+            <option value="Prius">Toyota Prius--Up to 3 people--2 large bags</option>
+            <option value="Mercedes E-Class">Mercedes E-Class--Up to 3 people--3 large bags</option>
+            <option value="Mercedes V-Class">Mercedes V-Class--Up to 5 people--4 large bags</option>
           </select>
         </div>
         <div class="date-time">
@@ -90,6 +111,7 @@
       <h2 style="color:#FFC03D; font-family: 'Open Sans',sans-serif; font-weight: bold;">Booking Details</h2>
       <p class="confirm-p"><b>Name:</b> <span id="confirmed-name"></span></p>
       <p class="confirm-p"><b>Pickup Location:</b> <span id="confirmed-pickup"></span></p>
+      <p class="confirm-p"><b>Via:</b> <span id="confirmed-via"></span></p>
       <p class="confirm-p"><b>Drop-off Location:</b> <span id="confirmed-dropoff"></span></p>
       <p class="confirm-p"><b>Selected Fleet:</b> <span id="confirmed-fleet"></span></p>
       <p class="confirm-p"><b>Phone no:</b> <span id="confirmed-phone"></span></p>
@@ -117,7 +139,7 @@
   </section>
 
   <script src="JS/index.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwncpgAXf6k-Ko0xI-oR7CeHMO0hrpUW8&libraries=geometry,places&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=&libraries=geometry,places&callback=initMap"
   async defer></script>
 </body>
 

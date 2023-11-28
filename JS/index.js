@@ -116,6 +116,28 @@ fleetButtons.forEach((button, index) => {
   });
 });
 
+///////////////////// NEW VIA INPUT //////////////////////
+
+function addVia() {
+  const optionValue = document.getElementById('via-number').value;
+  const container = document.getElementById('via-input');
+  
+  container.innerHTML = '';
+
+  for (let i = 0; i < optionValue; i++) {
+    const newViaInput = document.createElement('input');
+    newViaInput.type = 'text';
+    newViaInput.placeholder = 'Enter ' + [i+1] + ' Stop Location';
+    newViaInput.classList.add('form-control', 'via-input1');
+    newViaInput.id = 'via' + (i + 1);
+    newViaInput.style.marginBottom = '20px';
+
+    container.appendChild(newViaInput);
+
+    const autocomplete = new google.maps.places.Autocomplete(newViaInput);
+  }
+}
+
 ///////////////////////////// FORM ////////////////////////////////////////////
 
 function submit_click() {
@@ -128,9 +150,41 @@ function submit_click() {
   const time = document.getElementById('time').value;
   const payment = document.getElementById('paymentmethode').value;
 
+  // const viaNumber = document.getElementById('via-number').value;
+  // let viaValues = [];
+
+  // for (let i = 1; i <= viaNumber; i++) {
+  //   const viaInput = document.getElementById('via' + i);
+  //   if (viaInput) {
+  //     viaValues.push(viaInput.value);
+  //   }  
+  // }
+  // console.log('Via Values:', viaValues);
+
+  const viaNumber = document.getElementById('via-number').value;
+  let viaValues = [];
+
+  for (let i = 1; i <= viaNumber; i++) {
+    const viaInput = document.getElementById('via' + i);
+    if (viaInput) {
+      viaValues.push(viaInput.value);
+    }
+  }
+
 
   document.getElementById('confirmed-name').textContent = name;
   document.getElementById('confirmed-pickup').textContent = pickup;
+  // document.getElementById('confirmed-via').textContent = viaValues;
+
+  const viaList = document.getElementById('confirmed-via');
+  viaList.innerHTML = ''; // Clear the previous content
+
+  viaValues.forEach(value => {
+    const listItem = document.createElement('li');
+    listItem.textContent = value;
+    viaList.appendChild(listItem);
+  });
+
   document.getElementById('confirmed-dropoff').textContent = dropoff;
   document.getElementById('confirmed-fleet').textContent = fleet;
   document.getElementById('confirmed-phone').textContent = phone;
@@ -207,3 +261,29 @@ function confirm_form() {
           console.error('Error:', error.message);
       });
 }
+
+
+
+
+// function addVia(){
+//   const container = document.getElementById('via-input');
+//   container.innerHTML = '';
+
+//   const optionValue = document.getElementById('via-number').value;
+
+//   for (let i = 0; i < optionValue; i++) {
+
+//     alert(i)
+//     const container = document.getElementById('via-input');
+
+//     const newViaInput = document.createElement('input');
+//     newViaInput.type = 'text';
+//     newViaInput.placeholder = 'Enter Stop if any.';
+//     newViaInput.classList.add('form-control', 'via-input1');
+//     newViaInput.id = 'via' + (i + 1);
+
+//     container.appendChild(newViaInput);
+    
+//   }
+// }
+
