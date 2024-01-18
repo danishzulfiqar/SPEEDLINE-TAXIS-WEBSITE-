@@ -108,7 +108,7 @@ function addVia() {
     else{
     
     ////// enter your mail
-    const recepient = "haseebdar696@gmail.com"
+    const recepient = "enquiries@speedlinetaxis.org.uk"
   
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;

@@ -30,18 +30,7 @@ body {
     font-family: 'Nunito', sans-serif;
 }
 
-/* Styles for the form container */
-/* .form-container {
-    background-image:url('/ASSETS/location-mark.png');
-    background-size: cover;
-    width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.61);
-    background-color:#17344b8e;
-} */
+
 
 #form-container {
     position: relative;
@@ -79,71 +68,15 @@ select {
     border-color: black !important;
 }
 
-
-#confirmation-form {
-    display: none;
-    position: relative;
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.644);
-    overflow: hidden;
-  }
-  
-  #confirmation-form::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-image: url('/ASSETS/location-mark.png');
-    width: 400px;
-    height: 405px;
-    background-size: cover;
-    opacity: 0.2;
-    pointer-events: none; 
-  }
   
   
 
-#confirmation-form button {
-    background-color: #17344b !important;
-    border-color: #17344b !important;
-    color: #fff !important;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-}
-
-#confirmation-form button:hover {
-    background-color: #ffc03d !important;
-    color: black !important;
-}
-
-.payment {
-    display: flex;
-    flex-direction: row;
-}
-
-.date-time {
-    display: flex;
-    flex-direction: row;
-}
 
 .form-group {
     margin-bottom: 20px;
 }
 
-.form-control {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+
 
 .btn-primary {
     background-color: #17344b !important;
